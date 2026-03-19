@@ -1,0 +1,19 @@
+{
+  "manifest_version": 3,
+  "name": "Türkçe Karakter Dönüştürücü",
+  "version": "2.0",
+  "description": "Türkçe karaktersiz yazılan metinleri akıllı algoritmayı ile anında düzeltin.",
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icon16.png",
+      "48": "icon48.png",
+      "128": "icon128.png"
+    }
+  },
+  "icons": {
+    "16": "icon16.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  }
+}
