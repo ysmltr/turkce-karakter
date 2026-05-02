@@ -1,31 +1,19 @@
 <!DOCTYPE html>
-<html lang="tr">
+<html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Türkçe Karakter Dönüştürücü</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="popup.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="popup.css">
+    <title>Turkish Character Converter</title>
+  
 </head>
 <body>
-  <div class="shell">
+    <div class="header">
+        <h1>Turkish Character</h1>
+        <p>Converter</p>
+    </div>
 
-    <!-- Header -->
-    <header class="header">
-      <div class="logo">
-        <span class="logo-icon">Ğ</span>
-        <div class="logo-text">
-          <span class="logo-title">Türkçe Karakter</span>
-          <span class="logo-sub">Dönüştürücü</span>
-        </div>
-      </div>
-    </header>
-
-    <!-- Karakter Paleti -->
-    <section class="palet-section">
-      <div class="palet">
+    <div class="char-grid">
         <button class="char-btn" data-ch="ç">ç</button>
         <button class="char-btn" data-ch="Ç">Ç</button>
         <button class="char-btn" data-ch="ğ">ğ</button>
@@ -38,62 +26,29 @@
         <button class="char-btn" data-ch="Ş">Ş</button>
         <button class="char-btn" data-ch="ü">ü</button>
         <button class="char-btn" data-ch="Ü">Ü</button>
-      </div>
-    </section>
-
-    <!-- Input -->
-    <div class="field-group">
-      <div class="field-header">
-        <label class="field-label">Metin Girin</label>
-        <span id="sayac" class="sayac">0 karakter</span>
-      </div>
-      <textarea
-        id="input"
-        class="textarea"
-        placeholder="gunaydin, nasilsiniz, tesekkurler..."
-        spellcheck="false"
-        rows="4"
-      ></textarea>
-      <div class="hint">Ctrl+Enter ile hızla dönüştür</div>
     </div>
 
-    <!-- Butonlar -->
-    <div class="btn-row">
-      <button id="btn-donustur" class="btn btn-primary">
-        <span class="btn-icon">⇄</span> Dönüştür
-      </button>
-      <button id="btn-temiz" class="btn btn-ghost">Temizle</button>
+    <div class="label-row">
+        <span class="label">Enter Text</span>
+        <span class="counter" id="sayac">0 characters</span>
+    </div>
+    <textarea id="input" placeholder="gunaydin, nasilsiniz, tesekkurler..."></textarea>
+    <p class="hint">Press Ctrl+Enter to convert quickly</p>
+
+    <div class="button-row">
+        <button class="btn-primary" id="btn-donustur">
+            <span>⇄</span> Convert
+        </button>
+        <button class="btn-secondary" id="btn-temiz">Clear</button>
     </div>
 
-    <!-- Output -->
-    <div class="field-group">
-      <div class="field-header">
-        <label class="field-label">Sonuç</label>
-      </div>
-      <textarea
-        id="output"
-        class="textarea output-area"
-        placeholder="Dönüştürülmüş metin burada görünecek..."
-        readonly
-        rows="4"
-      ></textarea>
+    <div class="label-row">
+        <span class="label">Result</span>
     </div>
+    <textarea id="output" placeholder="Converted text will appear here..." readonly></textarea>
+    <button class="btn-copy" id="btn-kopya">Copy</button>
 
-    <!-- Kopyala -->
-    <div class="btn-row">
-      <button id="btn-kopya" class="btn btn-secondary">Kopyala</button>
-    </div>
-
-    <!-- Footer -->
-    <footer class="footer">
-      <p class="footer-copy">© 2025 Türkçe Karakter Dönüştürücü. Tüm hakları saklıdır.</p>
-      <p class="footer-attr">
-Daha Fazla bilgi için gizlilik politikası sayfamızı ziyaret ediniz
-      </p>
-    </footer>
-
-  </div>
-  <script src="deasciifier.js"></script>
-  <script src="popup.js"></script>
+    <script src="deasciifier.js"></script>
+    <script src="popup.js"></script>
 </body>
 </html>

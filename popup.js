@@ -1,6 +1,3 @@
-// ─── POPUP.JS ────────────────────────────────────────────
-// Türkçe Karakter Dönüştürücü v2.0
-// Algoritma: turkish-deasciifier (Dr. Deniz Yuret)
 
 document.addEventListener('DOMContentLoaded', () => {
   const inputEl  = document.getElementById('input');
@@ -14,7 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // Deasciifier instance
   const deasciifier = new TurkishDeasciifier();
 
-  // ── Karakter paleti ──────────────────────────────────
+  // ── Character palette ─────────────────────────────────
   charBtns.forEach(btn => {
     btn.addEventListener('click', () => {
       const ch    = btn.dataset.ch;
@@ -27,13 +24,13 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // ── Karakter sayacı ──────────────────────────────────
+  // ── Character counter ─────────────────────────────────
   inputEl.addEventListener('input', guncelleSayac);
   function guncelleSayac() {
-    sayac.textContent = inputEl.value.length + ' karakter';
+    sayac.textContent = inputEl.value.length + ' characters';
   }
 
-  // ── Dönüştür ─────────────────────────────────────────
+  // ── Convert ───────────────────────────────────────────
   btnDon.addEventListener('click', () => {
     const sonuc = deasciifier.deasciify(inputEl.value);
     outputEl.value = sonuc;
@@ -41,12 +38,12 @@ document.addEventListener('DOMContentLoaded', () => {
     setTimeout(() => outputEl.classList.remove('animate'), 400);
   });
 
-  // Ctrl+Enter kısayolu
+  // Ctrl+Enter shortcut
   inputEl.addEventListener('keydown', e => {
     if (e.key === 'Enter' && e.ctrlKey) btnDon.click();
   });
 
-  // ── Kopyala ──────────────────────────────────────────
+  // ── Copy ──────────────────────────────────────────────
   btnKopya.addEventListener('click', async () => {
     if (!outputEl.value) return;
     try {
@@ -55,15 +52,15 @@ document.addEventListener('DOMContentLoaded', () => {
       outputEl.select();
       document.execCommand('copy');
     }
-    btnKopya.textContent = '✓ Kopyalandı!';
+    btnKopya.textContent = '✓ Copied!';
     btnKopya.classList.add('copied');
     setTimeout(() => {
-      btnKopya.textContent = 'Kopyala';
+      btnKopya.textContent = 'Copy';
       btnKopya.classList.remove('copied');
     }, 1800);
   });
 
-  // ── Temizle ──────────────────────────────────────────
+  // ── Clear ─────────────────────────────────────────────
   btnTemiz.addEventListener('click', () => {
     inputEl.value  = '';
     outputEl.value = '';
