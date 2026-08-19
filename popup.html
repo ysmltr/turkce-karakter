@@ -5,48 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="popup.css">
     <title>Turkish Character Converter</title>
-  
 </head>
 <body>
-    <div class="header">
-        <h1>Turkish Character</h1>
-        <p>Converter</p>
-    </div>
+<div class="header">
+    <h1>Turkish Converter</h1>
+    <p class="subtitle">Type Turkish without the special letters — they're fixed automatically as you type.</p>
+</div>
 
-    <div class="char-grid">
-        <button class="char-btn" data-ch="ç">ç</button>
-        <button class="char-btn" data-ch="Ç">Ç</button>
-        <button class="char-btn" data-ch="ğ">ğ</button>
-        <button class="char-btn" data-ch="Ğ">Ğ</button>
-        <button class="char-btn" data-ch="ı">ı</button>
-        <button class="char-btn" data-ch="İ">İ</button>
-        <button class="char-btn" data-ch="ö">ö</button>
-        <button class="char-btn" data-ch="Ö">Ö</button>
-        <button class="char-btn" data-ch="ş">ş</button>
-        <button class="char-btn" data-ch="Ş">Ş</button>
-        <button class="char-btn" data-ch="ü">ü</button>
-        <button class="char-btn" data-ch="Ü">Ü</button>
-    </div>
-
-    <div class="label-row">
-        <span class="label">Enter Text</span>
-        <span class="counter" id="sayac">0 characters</span>
-    </div>
     <textarea id="input" placeholder="gunaydin, nasilsiniz, tesekkurler..."></textarea>
-    <p class="hint">Press Ctrl+Enter to convert quickly</p>
 
-    <div class="button-row">
-        <button class="btn-primary" id="btn-donustur">
-            <span>⇄</span> Convert
-        </button>
-        <button class="btn-secondary" id="btn-temiz">Clear</button>
+    <div class="output-wrap">
+        <textarea id="output" placeholder="Converted text will appear here..." readonly></textarea>
+        <button class="btn-copy" id="btn-kopya" title="Copy">Copy</button>
     </div>
-
-    <div class="label-row">
-        <span class="label">Result</span>
-    </div>
-    <textarea id="output" placeholder="Converted text will appear here..." readonly></textarea>
-    <button class="btn-copy" id="btn-kopya">Copy</button>
 
     <script src="deasciifier.js"></script>
     <script src="popup.js"></script>

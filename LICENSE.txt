@@ -1,0 +1,22 @@
+TurkFix
+Copyright (c) 2025-2026 <yesim ilter>
+All rights reserved.
+
+This license covers only the original source code of the TurkFix browser
+extension, namely:
+
+    manifest.json
+    popup.html
+    popup.css
+    popup.js
+    privacy-policy.html
+    icons/
+
+No permission is granted to copy, modify, distribute, or create derivative
+works from these files without the prior written consent of the copyright
+holder.
+
+Third-party components bundled with this extension are NOT covered by this
+license and remain the property of their respective authors. They are
+licensed separately under permissive open-source terms. See the file
+THIRD-PARTY-NOTICES.txt for the required attributions and license texts.

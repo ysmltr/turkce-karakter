@@ -1,8 +1,8 @@
 {
   "manifest_version": 3,
-  "name": "TurkFix: Turkish Character Converter",
-  "version": "2.3",
-  "description": "Type fast, we'll fix it fast — instantly correct text written without Turkish characters.",
+  "name": "TurkFix",
+  "version": "3.3",
+  "description": "Turkish character converter & deasciifier — fixes text typed without ı, ğ, ş, ö, ç, ü instantly as you type.",
   "action": {
     "default_popup": "popup.html",
     "default_icon": {
